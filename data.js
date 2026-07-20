@@ -2,7 +2,7 @@
 const PMP6_DATA = {
   "categories": {
     "Formation": {
-      "image": "formations.jfif",
+      "image": "Formations.PNG",
       "subcategories": {
         "N1": {
           "image": "formation N1.jfif",
@@ -29,35 +29,35 @@ const PMP6_DATA = {
         {
           "name": "prendre une licence",
           "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/640444-b-souscrire-une-licence-ffessm-2025-2026",
-          "image": "licence_ffessm.png"
+          "image": "licence FFESSM.JPG"
         },
         {
           "name": "prendre un brevet",
           "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/640475-h-achat-d-une-carte-de-brevet",
-          "image": "brevet_ffessm.png"
+          "image": "brevets FFESSM.JPG"
         }
       ]
     },
-    "Stage": {
-      "image": "stages.jfif",
+    "Stages": {
+      "image": "stages.JPG",
       "subcategories": {
         "Glénan": {
-          "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+          "image": "archipel_glenan.JPG",
           "links": [
             {
               "name": "inscription Glénan",
               "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/715905-y-stage-de-giens-ete-2026",
-              "image": "archipel_glenan.png"
+              "image": "Assoconnect logo.jfif"
             }
           ]
         },
-        "Marseille": {
-          "image": "https://images.unsplash.com/photo-1563784462386-044fd95e9852?auto=format&fit=crop&w=600&q=80",
+        "WE Frioul": {
+          "image": "ile_frioul.png",
           "links": [
             {
-              "name": "inscription Marseille",
+              "name": "inscription WE Frioul",
               "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/722164-p-we-de-marseille-frioul-sept-2026",
-              "image": "ile_frioul.png"
+              "image": "Assoconnect logo.jfif"
             }
           ]
         }
@@ -70,36 +70,36 @@ const PMP6_DATA = {
         }
       ]
     },
-    "matériel": {
-      "image": "matériel.jfif",
+    "Matériel": {
+      "image": "Compresseurs.JPG",
       "subcategories": {
         "Martin-Pêcheur": {
-          "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+          "image": "zodiac.jpg",
           "links": [
             {
-              "name": "Entretien MP",
-              "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/640475-h-achat-d-une-carte-de-brevet",
-              "image": "brevet_ffessm.png"
+              "name": "Drive Martin Pêcheur",
+              "url": "https://drive.google.com/drive/folders/1OimElXzaJT8I4hFWz2SdqfnxcW4fD93p?usp=drive_link",
+              "image": "drive Martin pecheur.PNG"
+            },
+            {
+              "name": "Certificat enregistrement",
+              "url": "https://drive.google.com/file/d/1fc6SnuU-Xw5TrUztn8odPsOdLMD5ve0i/view?usp=drive_link",
+              "image": "certif enregistrement MP.PNG"
             }
           ]
         },
-        "compresseur": {
-          "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+        "Compresseurs": {
+          "image": "Compresseurs.JPG",
           "links": [
             {
-              "name": "Entretien Juliette",
-              "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/715905-y-stage-de-giens-ete-2026",
-              "image": "archipel_glenan.png"
+              "name": "Drive compresseur",
+              "url": "https://drive.google.com/drive/folders/1lyFjzX06dFGaxSMcZUody-gTgurjHtLS?usp=drive_link",
+              "image": "drive compresseurs.PNG"
             },
             {
-              "name": "Entretien Le prince",
-              "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/722164-p-we-de-marseille-frioul-sept-2026",
-              "image": "ile_frioul.png"
-            },
-            {
-              "name": "Entretien Mercution",
-              "url": "https://docs.google.com/spreadsheets/d/1J36YaSyIj8gFCKkQBVyKbgh1ZCvKiSuJwX02ycIclj4/edit?gid=0#gid=0",
-              "image": "frioul.JPG"
+              "name": "Entretien compresseurs",
+              "url": "https://docs.google.com/document/d/13OrlSmbcMzBQf7rDi3eXIgHRKVFWvnhym9o8E0bClG0/edit?usp=drive_link",
+              "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80"
             }
           ]
         }
@@ -107,13 +107,18 @@ const PMP6_DATA = {
       "direct_links": []
     },
     "Section": {
-      "image": "section.jfif",
+      "image": "section PMP6.JPG",
       "subcategories": {},
       "direct_links": [
         {
-          "name": "Drive encadrant",
+          "name": "Drive encadrants",
           "url": "https://drive.google.com/drive/u/1/folders/1b-r6p9-zRpVgKEELuy3HgH2cavWhQZeX",
-          "image": "drive encadrants.jfif"
+          "image": "Drive encadrants.JPG"
+        },
+        {
+          "name": "Site web PMP6",
+          "url": "https://pmp6.fr/",
+          "image": "site web.PNG"
         }
       ]
     }
@@ -138,70 +143,77 @@ const PMP6_DATA = {
       "subcategory": "",
       "name": "prendre une licence",
       "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/640444-b-souscrire-une-licence-ffessm-2025-2026",
-      "image": "licence_ffessm.png"
+      "image": "licence FFESSM.JPG"
     },
     {
       "category": "FFESSM",
       "subcategory": "",
       "name": "prendre un brevet",
       "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/640475-h-achat-d-une-carte-de-brevet",
-      "image": "brevet_ffessm.png"
+      "image": "brevets FFESSM.JPG"
     },
     {
-      "category": "Stage",
+      "category": "Stages",
       "subcategory": "Glénan",
       "name": "inscription Glénan",
       "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/715905-y-stage-de-giens-ete-2026",
-      "image": "archipel_glenan.png"
+      "image": "Assoconnect logo.jfif"
     },
     {
-      "category": "Stage",
-      "subcategory": "Marseille",
-      "name": "inscription Marseille",
+      "category": "Stages",
+      "subcategory": "WE Frioul",
+      "name": "inscription WE Frioul",
       "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/722164-p-we-de-marseille-frioul-sept-2026",
-      "image": "ile_frioul.png"
+      "image": "Assoconnect logo.jfif"
     },
     {
-      "category": "Stage",
+      "category": "Stages",
       "subcategory": "",
       "name": "brevets délivrés",
       "url": "https://docs.google.com/spreadsheets/d/1J36YaSyIj8gFCKkQBVyKbgh1ZCvKiSuJwX02ycIclj4/edit?gid=0#gid=0",
       "image": "validation brevets.jfif"
     },
     {
-      "category": "matériel",
+      "category": "Matériel",
       "subcategory": "Martin-Pêcheur",
-      "name": "Entretien MP",
-      "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/640475-h-achat-d-une-carte-de-brevet",
-      "image": "brevet_ffessm.png"
+      "name": "Drive Martin Pêcheur",
+      "url": "https://drive.google.com/drive/folders/1OimElXzaJT8I4hFWz2SdqfnxcW4fD93p?usp=drive_link",
+      "image": "drive Martin pecheur.PNG"
     },
     {
-      "category": "matériel",
-      "subcategory": "compresseur",
-      "name": "Entretien Juliette",
-      "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/715905-y-stage-de-giens-ete-2026",
-      "image": "archipel_glenan.png"
+      "category": "Matériel",
+      "subcategory": "Martin-Pêcheur",
+      "name": "Certificat enregistrement",
+      "url": "https://drive.google.com/file/d/1fc6SnuU-Xw5TrUztn8odPsOdLMD5ve0i/view?usp=drive_link",
+      "image": "certif enregistrement MP.PNG"
     },
     {
-      "category": "matériel",
-      "subcategory": "compresseur",
-      "name": "Entretien Le prince",
-      "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/722164-p-we-de-marseille-frioul-sept-2026",
-      "image": "ile_frioul.png"
+      "category": "Matériel",
+      "subcategory": "Compresseurs",
+      "name": "Drive compresseur",
+      "url": "https://drive.google.com/drive/folders/1lyFjzX06dFGaxSMcZUody-gTgurjHtLS?usp=drive_link",
+      "image": "drive compresseurs.PNG"
     },
     {
-      "category": "matériel",
-      "subcategory": "compresseur",
-      "name": "Entretien Mercution",
-      "url": "https://docs.google.com/spreadsheets/d/1J36YaSyIj8gFCKkQBVyKbgh1ZCvKiSuJwX02ycIclj4/edit?gid=0#gid=0",
-      "image": "frioul.JPG"
+      "category": "Matériel",
+      "subcategory": "Compresseurs",
+      "name": "Entretien compresseurs",
+      "url": "https://docs.google.com/document/d/13OrlSmbcMzBQf7rDi3eXIgHRKVFWvnhym9o8E0bClG0/edit?usp=drive_link",
+      "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80"
     },
     {
       "category": "Section",
       "subcategory": "",
-      "name": "Drive encadrant",
+      "name": "Drive encadrants",
       "url": "https://drive.google.com/drive/u/1/folders/1b-r6p9-zRpVgKEELuy3HgH2cavWhQZeX",
-      "image": "drive encadrants.jfif"
+      "image": "Drive encadrants.JPG"
+    },
+    {
+      "category": "Section",
+      "subcategory": "",
+      "name": "Site web PMP6",
+      "url": "https://pmp6.fr/",
+      "image": "site web.PNG"
     }
   ]
 };
