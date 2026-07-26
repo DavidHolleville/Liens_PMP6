@@ -1044,3 +1044,251 @@ body {
     border-color: var(--primary-color);
     transform: translateY(-2px);
 }
+
+/* Styles pour les cartes verrouillées */
+.card-icon-locked {
+    background: rgba(239, 68, 68, 0.2) !important;
+    border-color: rgba(239, 68, 68, 0.35) !important;
+    color: #f87171 !important;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.15) !important;
+}
+
+.card-icon-locked:hover {
+    background: rgba(239, 68, 68, 0.35) !important;
+    border-color: #ef4444 !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Styles pour la modale de code PIN */
+.pin-modal-content {
+    max-width: 360px !important;
+    text-align: center;
+}
+
+.pin-modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem !important;
+}
+
+.pin-icon-wrapper {
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--primary-color);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.15);
+}
+
+.lock-icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.pin-message {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+/* Affichage des points PIN */
+.pin-display {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pin-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+.pin-dot.filled {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    transform: scale(1.15);
+}
+
+.pin-display.shake {
+    animation: shake 0.4s ease;
+}
+
+.pin-dot.error {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    box-shadow: 0 0 10px #ef4444;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+}
+
+/* Clavier numérique */
+.pin-keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 260px;
+}
+
+.pin-key {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    user-select: none;
+}
+
+.pin-key:hover {
+    background: rgba(0, 210, 255, 0.15);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.pin-key:active {
+    transform: scale(0.95);
+}
+
+.pin-key-clear {
+    color: var(--text-muted);
+}
+
+.pin-key-clear svg {
+    stroke: currentColor;
+    transition: var(--transition-smooth);
+}
+
+.pin-key-clear:hover svg {
+    stroke: var(--primary-color);
+}
+
+.pin-key-cancel {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.pin-key-cancel:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: none;
+}
+
+/* Ajustements pour smartphone en mode portrait (max-width: 480px) */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+    
+    .card {
+        height: 125px !important;
+        padding: 0.85rem !important;
+        border-radius: 12px !important;
+    }
+    
+    .card-title {
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        line-height: 1.25 !important;
+    }
+    
+    .card-subtitle {
+        font-size: 0.7rem !important;
+    }
+    
+    .card-tag {
+        font-size: 0.6rem !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    /* Positionnement et dimensions des icônes sur cartes compactes */
+    .card-icon, .card-copy-btn {
+        width: 1.65rem !important;
+        height: 1.65rem !important;
+    }
+    
+    .card-icon {
+        top: 0.75rem !important;
+        right: 0.75rem !important;
+    }
+    
+    .card-icon svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
+    
+    .card-copy-btn {
+        bottom: 0.75rem !important;
+        right: 0.75rem !important;
+    }
+    
+    .card-copy-btn svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
+    
+    /* Badge de recherche compact */
+    .card-path-badge {
+        top: 0.75rem !important;
+        left: 0.75rem !important;
+        font-size: 0.6rem !important;
+        padding: 0.2rem 0.4rem !important;
+    }
+    
+    /* Ajustement de la barre d'outils et en-tête sur petit écran */
+    .app-header {
+        padding: 0.6rem 1rem !important;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.15rem !important;
+    }
+    
+    .logo-text p {
+        font-size: 0.65rem !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .request-btn {
+        padding: 0.5rem 0.85rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .nav-bar {
+        padding: 0.5rem 0.6rem !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+    
+    .breadcrumbs {
+        font-size: 0.8rem !important;
+    }
+}

@@ -73,6 +73,14 @@ def parse_excel():
             if not found:
                 raise KeyError(f"La colonne '{col}' est manquante dans le fichier Excel.")
 
+    # Normalisation pour la colonne lock (optionnelle)
+    lock_col = None
+    for real_col in df.columns:
+        if 'lock' in real_col.lower():
+            df.rename(columns={real_col: 'lock'}, inplace=True)
+            lock_col = 'lock'
+            break
+
     data = {
         "categories": {},
         "all_links": []
@@ -115,13 +123,20 @@ def parse_excel():
         print(f"Traitement du lien : '{nom}'")
         img_url = get_best_image(nom, sub, cat, img_custom)
         
+        # Vérification si le lien est verrouillé
+        is_locked = False
+        if lock_col and lock_col in df.columns:
+            lock_val = clean_text(row.get('lock'))
+            is_locked = bool(lock_val)
+        
         # Enregistrer dans la liste globale
         data["all_links"].append({
             "category": cat,
             "subcategory": sub,
             "name": nom,
             "url": lien,
-            "image": img_url
+            "image": img_url,
+            "locked": is_locked
         })
         
         # Structuration hiérarchique
@@ -151,7 +166,8 @@ def parse_excel():
             data["categories"][cat]["direct_links"].append({
                 "name": nom,
                 "url": lien,
-                "image": img_url
+                "image": img_url,
+                "locked": is_locked
             })
         else:
             if sub not in data["categories"][cat]["subcategories"]:
@@ -177,7 +193,8 @@ def parse_excel():
             data["categories"][cat]["subcategories"][sub]["links"].append({
                 "name": nom,
                 "url": lien,
-                "image": img_url
+                "image": img_url,
+                "locked": is_locked
             })
 
     # Sauvegarde dans data.js

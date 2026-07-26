@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initEventListeners();
     initPwa();
     initRequestModal();
+    initLockModal();
     render();
 });
 
@@ -228,7 +229,8 @@ function render() {
                     icon: SVG_ICONS.externalLink,
                     isLink: true,
                     url: link.url,
-                    onClick: () => window.open(link.url, '_blank')
+                    locked: link.locked,
+                    onClick: () => handleLinkOpen(link.url, link.locked)
                 });
                 gridContainer.appendChild(card);
             });
@@ -273,7 +275,8 @@ function render() {
                     icon: SVG_ICONS.externalLink,
                     isLink: true,
                     url: link.url,
-                    onClick: () => window.open(link.url, '_blank')
+                    locked: link.locked,
+                    onClick: () => handleLinkOpen(link.url, link.locked)
                 });
                 gridContainer.appendChild(card);
             });
@@ -306,7 +309,8 @@ function render() {
                 icon: SVG_ICONS.externalLink,
                 isLink: true,
                 url: link.url,
-                onClick: () => window.open(link.url, '_blank')
+                locked: link.locked,
+                onClick: () => handleLinkOpen(link.url, link.locked)
             });
             gridContainer.appendChild(card);
         });
@@ -317,7 +321,7 @@ function render() {
 }
 
 // --- CREATION DE CARTES DYNAMIQUE ---
-function createCard({ type, category, subcategory = "", name = "", title, subtitle, image, tag, icon, isLink = false, url = null, onClick, pathBadgeText = null }) {
+function createCard({ type, category, subcategory = "", name = "", title, subtitle, image, tag, icon, isLink = false, url = null, onClick, pathBadgeText = null, locked = false }) {
     const card = document.createElement('a');
     card.className = `card ${isLink ? 'card-link' : ''}`;
     card.href = "#";
@@ -345,7 +349,15 @@ function createCard({ type, category, subcategory = "", name = "", title, subtit
     if (isLink) {
         const iconWrapper = document.createElement('div');
         iconWrapper.className = 'card-icon';
-        iconWrapper.innerHTML = icon;
+        if (locked) {
+            iconWrapper.className += ' card-icon-locked';
+            iconWrapper.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                     </svg>`;
+        } else {
+            iconWrapper.innerHTML = icon;
+        }
         card.appendChild(iconWrapper);
     }
     
@@ -491,8 +503,9 @@ function renderSearch(gridContainer, noResults, breadcrumbs, backBtn, itemsCount
             icon: SVG_ICONS.externalLink,
             isLink: true,
             url: link.url,
+            locked: link.locked,
             pathBadgeText: pathBadge,
-            onClick: () => window.open(link.url, '_blank')
+            onClick: () => handleLinkOpen(link.url, link.locked)
         });
         gridContainer.appendChild(card);
     });
@@ -608,4 +621,140 @@ function submitRequestForm() {
     
     // Fermer la modale
     closeRequestModal();
+}
+
+// --- LOGIQUE DE VERROUILLAGE & CADENAS (PIN CODE) ---
+let lockTargetUrl = "";
+let enteredPin = "";
+
+function handleLinkOpen(url, locked) {
+    if (locked) {
+        openLockModal(url);
+    } else {
+        window.open(url, '_blank');
+    }
+}
+
+function openLockModal(url) {
+    lockTargetUrl = url;
+    enteredPin = "";
+    updatePinDisplay();
+    
+    const modal = document.getElementById('lockModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+    }
+}
+
+function closeLockModal() {
+    const modal = document.getElementById('lockModal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+    lockTargetUrl = "";
+    enteredPin = "";
+}
+
+function updatePinDisplay() {
+    const display = document.getElementById('pinDisplay');
+    if (!display) return;
+    
+    const dots = display.querySelectorAll('.pin-dot');
+    dots.forEach((dot, index) => {
+        if (index < enteredPin.length) {
+            dot.classList.add('filled');
+        } else {
+            dot.classList.remove('filled');
+        }
+        dot.classList.remove('error');
+    });
+}
+
+function handlePinInput(digit) {
+    if (enteredPin.length >= 4) return;
+    
+    enteredPin += digit;
+    updatePinDisplay();
+    
+    if (enteredPin.length === 4) {
+        // Attendre un tout petit peu pour que l'utilisateur voie le dernier point se remplir
+        setTimeout(verifyPin, 150);
+    }
+}
+
+function handlePinBackspace() {
+    if (enteredPin.length > 0) {
+        enteredPin = enteredPin.slice(0, -1);
+        updatePinDisplay();
+    }
+}
+
+function verifyPin() {
+    if (enteredPin === "4427") {
+        // Code correct ! Ouvrir le lien
+        if (lockTargetUrl) {
+            window.open(lockTargetUrl, '_blank');
+        }
+        closeLockModal();
+    } else {
+        // Code incorrect !
+        const display = document.getElementById('pinDisplay');
+        if (display) {
+            display.classList.add('shake');
+            const dots = display.querySelectorAll('.pin-dot');
+            dots.forEach(dot => dot.classList.add('error'));
+            
+            // Retirer l'animation et vider le pin après un délai
+            setTimeout(() => {
+                display.classList.remove('shake');
+                enteredPin = "";
+                updatePinDisplay();
+            }, 600);
+        } else {
+            enteredPin = "";
+            updatePinDisplay();
+        }
+    }
+}
+
+function initLockModal() {
+    const modal = document.getElementById('lockModal');
+    const closeBtn = document.getElementById('closeLockModalBtn');
+    const backdrop = document.getElementById('lockModalBackdrop');
+    const clearBtn = document.getElementById('pinClear');
+    const cancelBtn = document.getElementById('pinCancel');
+    
+    if (!modal) return;
+    
+    // Fermeture
+    if (closeBtn) closeBtn.addEventListener('click', closeLockModal);
+    if (backdrop) backdrop.addEventListener('click', closeLockModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeLockModal);
+    
+    // Clavier virtuel
+    const keys = modal.querySelectorAll('.pin-key[data-value]');
+    keys.forEach(key => {
+        key.addEventListener('click', () => {
+            const val = key.getAttribute('data-value');
+            handlePinInput(val);
+        });
+    });
+    
+    if (clearBtn) {
+        clearBtn.addEventListener('click', handlePinBackspace);
+    }
+    
+    // Clavier physique
+    document.addEventListener('keydown', (e) => {
+        // N'intercepter que si le modal est visible
+        if (modal.classList.contains('hidden')) return;
+        
+        if (e.key >= '0' && e.key <= '9') {
+            handlePinInput(e.key);
+        } else if (e.key === 'Backspace') {
+            handlePinBackspace();
+        } else if (e.key === 'Escape') {
+            closeLockModal();
+        }
+    });
 }
