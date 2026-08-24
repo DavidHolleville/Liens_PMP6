@@ -66,6 +66,17 @@ const PMP6_DATA = {
               "locked": false
             }
           ]
+        },
+        "Dieppe": {
+          "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+          "links": [
+            {
+              "name": "Port de plaisance",
+              "url": "https://portdedieppe.fr/le-port-de-plaisance/",
+              "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+              "locked": false
+            }
+          ]
         }
       },
       "direct_links": [
@@ -191,6 +202,14 @@ const PMP6_DATA = {
       "name": "brevets délivrés",
       "url": "https://docs.google.com/spreadsheets/d/1J36YaSyIj8gFCKkQBVyKbgh1ZCvKiSuJwX02ycIclj4/edit?gid=0#gid=0",
       "image": "validation brevets.jfif",
+      "locked": false
+    },
+    {
+      "category": "Stages",
+      "subcategory": "Dieppe",
+      "name": "Port de plaisance",
+      "url": "https://portdedieppe.fr/le-port-de-plaisance/",
+      "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
       "locked": false
     },
     {
