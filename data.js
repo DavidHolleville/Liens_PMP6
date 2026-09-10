@@ -108,7 +108,7 @@ const PMP6_DATA = {
             {
               "name": "Port de plaisance",
               "url": "https://portdedieppe.fr/le-port-de-plaisance/",
-              "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+              "image": "port de Dieppe.jfif",
               "locked": false
             }
           ]
@@ -276,7 +276,7 @@ const PMP6_DATA = {
       "subcategory": "Dieppe",
       "name": "Port de plaisance",
       "url": "https://portdedieppe.fr/le-port-de-plaisance/",
-      "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+      "image": "port de Dieppe.jfif",
       "locked": false
     },
     {
