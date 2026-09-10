@@ -5,7 +5,7 @@ const PMP6_DATA = {
       "image": "Formations.PNG",
       "subcategories": {
         "N1": {
-          "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
+          "image": "formation N1.jfif",
           "links": [
             {
               "name": "Drive PN1",
@@ -16,7 +16,7 @@ const PMP6_DATA = {
           ]
         },
         "N2": {
-          "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+          "image": "formation N2s.jfif",
           "links": [
             {
               "name": "Drive PN2",
@@ -27,7 +27,7 @@ const PMP6_DATA = {
           ]
         },
         "Initiateurs": {
-          "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+          "image": "initiateur.jpg",
           "links": [
             {
               "name": "Drive initiateurs",
@@ -44,13 +44,7 @@ const PMP6_DATA = {
           "url": "https://plongee.ffessm.fr/mft",
           "image": "MFT FFESSM.PNG",
           "locked": false
-        }
-      ]
-    },
-    "Formation": {
-      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
-      "subcategories": {},
-      "direct_links": [
+        },
         {
           "name": "Présence Piscine",
           "url": "https://beta.framadate.org/polls/1a183f9381edea424a43",
@@ -198,7 +192,7 @@ const PMP6_DATA = {
       "locked": false
     },
     {
-      "category": "Formation",
+      "category": "Formations",
       "subcategory": "",
       "name": "Présence Piscine",
       "url": "https://beta.framadate.org/polls/1a183f9381edea424a43",
