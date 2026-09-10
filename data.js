@@ -1,7 +1,7 @@
 // Ce fichier est généré automatiquement par parse_links.py. Ne pas modifier manuellement.
 const PMP6_DATA = {
   "categories": {
-    "Formation": {
+    "Formations": {
       "image": "Formations.PNG",
       "subcategories": {
         "N1": {
@@ -9,7 +9,7 @@ const PMP6_DATA = {
           "links": [
             {
               "name": "calendrier de présence moniteur",
-              "url": "https://drive.google.com/drive/u/0/folders/1rFJEf7VlS9QoiBME4AcHEi4efEqHQ7ms",
+              "url": "https://framadate.org/ceqXkVt6269sr9YA",
               "image": "calendrier_presence.png",
               "locked": false
             },
@@ -22,7 +22,14 @@ const PMP6_DATA = {
           ]
         }
       },
-      "direct_links": []
+      "direct_links": [
+        {
+          "name": "Lien vers le MFT FFESSM",
+          "url": "https://plongee.ffessm.fr/mft",
+          "image": "MFT FFESSM.PNG",
+          "locked": false
+        }
+      ]
     },
     "FFESSM": {
       "image": "drapeau FFESSM.jfif",
@@ -50,8 +57,14 @@ const PMP6_DATA = {
           "links": [
             {
               "name": "inscription Glénan",
-              "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/715905-y-stage-de-giens-ete-2026",
+              "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/727470-e-stage-archipel-des-glenan-12-16-septembre-2026",
               "image": "Assoconnect logo.jfif",
+              "locked": false
+            },
+            {
+              "name": "fichier info",
+              "url": "https://forms.gle/UqSzMYsF4ZXwTW9r5",
+              "image": "archipel_glenan.JPG",
               "locked": false
             }
           ]
@@ -149,15 +162,23 @@ const PMP6_DATA = {
   },
   "all_links": [
     {
-      "category": "Formation",
+      "category": "Formations",
+      "subcategory": "",
+      "name": "Lien vers le MFT FFESSM",
+      "url": "https://plongee.ffessm.fr/mft",
+      "image": "MFT FFESSM.PNG",
+      "locked": false
+    },
+    {
+      "category": "Formations",
       "subcategory": "N1",
       "name": "calendrier de présence moniteur",
-      "url": "https://drive.google.com/drive/u/0/folders/1rFJEf7VlS9QoiBME4AcHEi4efEqHQ7ms",
+      "url": "https://framadate.org/ceqXkVt6269sr9YA",
       "image": "calendrier_presence.png",
       "locked": false
     },
     {
-      "category": "Formation",
+      "category": "Formations",
       "subcategory": "N1",
       "name": "fichie de suivi N1",
       "url": "https://notebooklm.google.com/notebook/abd26236-a7dc-4906-a4a4-02ed93e42ce4",
@@ -184,8 +205,16 @@ const PMP6_DATA = {
       "category": "Stages",
       "subcategory": "Glénan",
       "name": "inscription Glénan",
-      "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/715905-y-stage-de-giens-ete-2026",
+      "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/727470-e-stage-archipel-des-glenan-12-16-septembre-2026",
       "image": "Assoconnect logo.jfif",
+      "locked": false
+    },
+    {
+      "category": "Stages",
+      "subcategory": "Glénan",
+      "name": "fichier info",
+      "url": "https://forms.gle/UqSzMYsF4ZXwTW9r5",
+      "image": "archipel_glenan.JPG",
       "locked": false
     },
     {
