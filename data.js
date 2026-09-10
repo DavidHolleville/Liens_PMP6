@@ -5,19 +5,35 @@ const PMP6_DATA = {
       "image": "Formations.PNG",
       "subcategories": {
         "N1": {
-          "image": "formation N1.jfif",
+          "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
           "links": [
             {
-              "name": "calendrier de présence moniteur",
-              "url": "https://framadate.org/ceqXkVt6269sr9YA",
-              "image": "calendrier_presence.png",
+              "name": "Drive PN1",
+              "url": "https://drive.google.com/drive/folders/12jL9kPcY0IK_BNcxE-p-XPvNIG3ZnR2b?usp=sharing",
+              "image": "drive.PNG",
               "locked": false
-            },
+            }
+          ]
+        },
+        "N2": {
+          "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+          "links": [
             {
-              "name": "fichie de suivi N1",
-              "url": "https://notebooklm.google.com/notebook/abd26236-a7dc-4906-a4a4-02ed93e42ce4",
-              "image": "suivi_n1.png",
-              "locked": true
+              "name": "Drive PN2",
+              "url": "https://drive.google.com/drive/folders/1LFzezVLM0atpdnad_aEQJvTLsRhrpkqf?usp=sharing",
+              "image": "drive.PNG",
+              "locked": false
+            }
+          ]
+        },
+        "Initiateurs": {
+          "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80",
+          "links": [
+            {
+              "name": "Drive initiateurs",
+              "url": "https://drive.google.com/drive/folders/1Khd16aOr3tb0SGSDaf-LFWPqbObfNjbp?usp=sharing",
+              "image": "drive.PNG",
+              "locked": false
             }
           ]
         }
@@ -27,6 +43,18 @@ const PMP6_DATA = {
           "name": "Lien vers le MFT FFESSM",
           "url": "https://plongee.ffessm.fr/mft",
           "image": "MFT FFESSM.PNG",
+          "locked": false
+        }
+      ]
+    },
+    "Formation": {
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
+      "subcategories": {},
+      "direct_links": [
+        {
+          "name": "Présence Piscine",
+          "url": "https://beta.framadate.org/polls/1a183f9381edea424a43",
+          "image": "piscine_JT.jpg",
           "locked": false
         }
       ]
@@ -170,20 +198,36 @@ const PMP6_DATA = {
       "locked": false
     },
     {
-      "category": "Formations",
-      "subcategory": "N1",
-      "name": "calendrier de présence moniteur",
-      "url": "https://framadate.org/ceqXkVt6269sr9YA",
-      "image": "calendrier_presence.png",
+      "category": "Formation",
+      "subcategory": "",
+      "name": "Présence Piscine",
+      "url": "https://beta.framadate.org/polls/1a183f9381edea424a43",
+      "image": "piscine_JT.jpg",
       "locked": false
     },
     {
       "category": "Formations",
       "subcategory": "N1",
-      "name": "fichie de suivi N1",
-      "url": "https://notebooklm.google.com/notebook/abd26236-a7dc-4906-a4a4-02ed93e42ce4",
-      "image": "suivi_n1.png",
-      "locked": true
+      "name": "Drive PN1",
+      "url": "https://drive.google.com/drive/folders/12jL9kPcY0IK_BNcxE-p-XPvNIG3ZnR2b?usp=sharing",
+      "image": "drive.PNG",
+      "locked": false
+    },
+    {
+      "category": "Formations",
+      "subcategory": "N2",
+      "name": "Drive PN2",
+      "url": "https://drive.google.com/drive/folders/1LFzezVLM0atpdnad_aEQJvTLsRhrpkqf?usp=sharing",
+      "image": "drive.PNG",
+      "locked": false
+    },
+    {
+      "category": "Formations",
+      "subcategory": "Initiateurs",
+      "name": "Drive initiateurs",
+      "url": "https://drive.google.com/drive/folders/1Khd16aOr3tb0SGSDaf-LFWPqbObfNjbp?usp=sharing",
+      "image": "drive.PNG",
+      "locked": false
     },
     {
       "category": "FFESSM",
