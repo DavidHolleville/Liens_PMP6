@@ -178,6 +178,30 @@ const PMP6_DATA = {
           "url": "https://pmp6.fr/",
           "image": "site web.PNG",
           "locked": false
+        },
+        {
+          "name": "Calendrier",
+          "url": "https://912f85077c264cb8b9a9c15d0e25b4c7.elf.site",
+          "image": "calendrier_pmp6.PNG",
+          "locked": false
+        }
+      ]
+    },
+    "Archives": {
+      "image": "archives.jfif",
+      "subcategories": {},
+      "direct_links": [
+        {
+          "name": "CR réunions encadrement",
+          "url": "https://drive.google.com/drive/u/1/folders/1yuIsG_itFnh9bqR-5Z0wLFFuHn5p17WL",
+          "image": "CR_pmp6.PNG",
+          "locked": false
+        },
+        {
+          "name": "Poulpes copulateurs",
+          "url": "https://drive.google.com/drive/u/1/folders/1DECLxBaKz4pASAxiRXG0PHH1b3NduTrW",
+          "image": "poulpe_copulateur.PNG",
+          "locked": false
         }
       ]
     }
@@ -325,6 +349,30 @@ const PMP6_DATA = {
       "name": "Site web PMP6",
       "url": "https://pmp6.fr/",
       "image": "site web.PNG",
+      "locked": false
+    },
+    {
+      "category": "Section",
+      "subcategory": "",
+      "name": "Calendrier",
+      "url": "https://912f85077c264cb8b9a9c15d0e25b4c7.elf.site",
+      "image": "calendrier_pmp6.PNG",
+      "locked": false
+    },
+    {
+      "category": "Archives",
+      "subcategory": "",
+      "name": "CR réunions encadrement",
+      "url": "https://drive.google.com/drive/u/1/folders/1yuIsG_itFnh9bqR-5Z0wLFFuHn5p17WL",
+      "image": "CR_pmp6.PNG",
+      "locked": false
+    },
+    {
+      "category": "Archives",
+      "subcategory": "",
+      "name": "Poulpes copulateurs",
+      "url": "https://drive.google.com/drive/u/1/folders/1DECLxBaKz4pASAxiRXG0PHH1b3NduTrW",
+      "image": "poulpe_copulateur.PNG",
       "locked": false
     }
   ]
