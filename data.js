@@ -112,6 +112,17 @@ const PMP6_DATA = {
               "locked": false
             }
           ]
+        },
+        "Lérins": {
+          "image": "lérins2.jpg",
+          "links": [
+            {
+              "name": "inscription Lérins",
+              "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/758406-m-stage-lerins-toussaint-2026",
+              "image": "lérins.PNG",
+              "locked": false
+            }
+          ]
         }
       },
       "direct_links": [
@@ -301,6 +312,14 @@ const PMP6_DATA = {
       "name": "Port de plaisance",
       "url": "https://portdedieppe.fr/le-port-de-plaisance/",
       "image": "port de Dieppe.jfif",
+      "locked": false
+    },
+    {
+      "category": "Stages",
+      "subcategory": "Lérins",
+      "name": "inscription Lérins",
+      "url": "https://association-sportive-de-sorbonne-sim.assoconnect.com/collect/description/758406-m-stage-lerins-toussaint-2026",
+      "image": "lérins.PNG",
       "locked": false
     },
     {
